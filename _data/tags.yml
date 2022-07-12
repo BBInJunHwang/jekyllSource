@@ -1,0 +1,12 @@
+springBoot :
+  name: springBoot
+  description: False
+  cover: assets/images/springBoot/blog-cover.jpg
+spring :
+  name: spring
+  description: False
+  cover: assets/images/spring/blog-cover.jpg
+infra :
+  name: infra
+  description: False
+  cover: assets/images/infra/blog-cover.jpg
