@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://bbinjunhwang.github.io//tag/infra/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://bbinjunhwang.github.io//" rel="alternate" type="text/html" />
+  <updated>2022-08-19T08:54:14+00:00</updated>
+  <id>https://bbinjunhwang.github.io//tag/infra/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">junny blogs | </title>
+  
+
+  
+    <subtitle>백엔드</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">infra 시작하기</title>
+      <link href="https://bbinjunhwang.github.io//infra-01_basic" rel="alternate" type="text/html" title="infra 시작하기" />
+      <published>2022-06-11T18:00:00+00:00</published>
+      <updated>2022-06-11T18:00:00+00:00</updated>
+      <id>https://bbinjunhwang.github.io//infra-01_basic</id>
+      <content type="html" xml:base="https://bbinjunhwang.github.io//infra-01_basic">&lt;p&gt;infra 시작해보자&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>BBInJunHwang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="infra" />
+      
+
+      
+        <summary type="html">infra 시작해보자</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
