@@ -40,6 +40,21 @@ author: BBInJunHwang
 @CreationTimestamp - 현재 시간 입력한다.
 
 <img data-action="zoom" src='{{ "/assets/images/springBoot/springBoot01/ch02_model_01.PNG" | relative_url }}' alt='absolute'>
+
+
+@Lob - 대용량 데이터 설정
+@ColumDefault("'문자'") - ""안에 숫자면 그대로, 문자면 ''감싸서 default 값 적용가능
+
+@ManyToOne(fetch = FethchType.EAGER) - 반드시 찾는다.
+@JoinColumn(name="필드명") - 선언된 필드(모델 테이블 클래스)와 
+name으로 선언된 필드를 FK로 설정한다. (자동생성)
+예시로 사용자 1명은 여러개 게시글을 작성 가능하다.
+
+
+ @OneToMany(mappedBy = "필드명") - 예시로 게시글 1개에는 여러개 답글을 달 수 있다. mappedBy는 FK 생성이 아닌 단순 조인을 위한 필드 일뿐이다. 
+
+
+
 <img data-action="zoom" src='{{ "/assets/images/springBoot/springBoot01/ch02_model_02.PNG" | relative_url }}' alt='absolute'>
 
 
