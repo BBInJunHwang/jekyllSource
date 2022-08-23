@@ -12,7 +12,7 @@ subclass: 'post tag-spring'
 author: BBInJunHwang
 ---
 
-{% include spring-table-of-contents.html %}
+{% include table-of-contents_springFramework.html %}
 <br>
 <h2>[스프링] AOP PointCut</h2><br>
 

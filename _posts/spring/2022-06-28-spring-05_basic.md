@@ -12,23 +12,27 @@ subclass: 'post tag-spring'
 author: BBInJunHwang
 ---
 
-{% include spring-table-of-contents.html %}
-<br>
+{% include table-of-contents_springFramework.html %}
+<div>
 <h2>[스프링] DI 3가지 방법</h2><br>
 
-저번 시간 예제를 그대로 이어서 DI 3가지 방법을 설명한다.
+DI 3가지 방법을 설명한다.<br>
 
-아래와 같이 Component-scan 과 base package 를 설정해주면 @Component, @Service, @Repository 등 빈으로 선언한 클래스를 스캔 후 빈으로 등록한다.
-context:annotation-config 과 다른점은 annotation-config은 xml 등 이미 선언된 빈에 대해서 @Autowired 등 자동 주입을 진행해주기 떄문에<br>
-반드시 미리 빈을 선언 해놓아야 한다.
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_xml_01.PNG" | relative_url }}' alt='absolute'>
+
+<p align = "justify">
+<font size=3>
+아래와 같이 Component-scan 과 base package 를 설정해주면 @Component, @Service, @Repository 등<br>
+빈으로 선언한 클래스를 스캔 후 빈으로 등록한다.<br><br>
+context:annotation-config 과 다른점은 annotation-config은 xml 등 이미 선언된 빈에 대해서
+@Autowired 등 자동 주입을 진행해주기 떄문에 반드시 미리 빈을 선언 해놓아야 한다.<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_xml_01.PNG" | relative_url }}' alt='absolute'>
 
 1. 필드주입 <br>
 -> dao 클래스에서 @Autowired private List userList 필드부분에 선언<br>
 -> service 클래스에 @Autowired private CommonDao commonDao 필드부분에 선언<br>
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_dao_class_field_01.PNG" | relative_url }}' alt='absolute'>
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_field_01.PNG" | relative_url }}' alt='absolute'>
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_main_class_01.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_dao_class_field_01.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_field_01.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_main_class_01.PNG" | relative_url }}' alt='absolute'>
 
 
 2. setter 주입 <br>
@@ -37,15 +41,15 @@ context:annotation-config 과 다른점은 annotation-config은 xml 등 이미 �
 ※ dao 클래스에서 @Autowired 대신 @Resource 사용해도 동일하며 <br>
 @Autowired는 타입 > name 순서,
 @Resource는 name > 타입 순서로 탐색하며 @Resource 사용시 빈 name을 명시해주는게 좋다.
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_dao_class_setter_01.PNG" | relative_url }}' alt='absolute'>
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_setter_01.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_dao_class_setter_01.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_setter_01.PNG" | relative_url }}' alt='absolute'>
 
 3. 생성자 주입<br>
 -> dao 클래스에서 생성자로 userList를 받은 후 설정한다. <br>
 -> service 클래스에서 생성자로 commonDao를 받은 후 설정한다. <br>
 ※ 생성자 주입에서는 @Autowired, @Resource 등 어노테이션 생략이 가능하다. (단 반드시 단일생성자일때만 )
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_dao_class_constructor_01.PNG" | relative_url }}' alt='absolute'>
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_constructor_01.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_dao_class_constructor_01.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_constructor_01.PNG" | relative_url }}' alt='absolute'>
 
 
 필드주입 vs setter 주입 vs 생성자 주입
@@ -70,13 +74,16 @@ setter 주입<br>
 
 먼저 아래와 같이 setter 주입을 예시로 했으며, 필드주입도 동일한 현상이 일어난다.<br>
 dao 클래스 @Repository 주석 처리를 통한 빈등록 x <br>
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_dao_class_notBean_01.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_dao_class_notBean_01.PNG" | relative_url }}' alt='absolute'>
 service 클래스 setCommonDao를 통한 dao 주입<br>
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_setter_02.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_setter_02.PNG" | relative_url }}' alt='absolute'>
 기동 시 dao 클래스는 null 인상태로 주입되며, service 클래스에서 호출되기 전까지 null인지 알 수 없음<br>
 실제 서버 기동 후 해당 클래스가 호출될 때 알 수 있다.(런타임 에러시 발견)
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_setter_NPE_01.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_setter_NPE_01.PNG" | relative_url }}' alt='absolute'>
 
 생성자 주입 시 아래와 같이 생성과 동시에 주입 되며, 컴파일 시 에러 발생을 통한 미리 알 수 있다.<br>
 실제로 서비스를 운영하는 시점에서 서버가 정상기동되면 놓칠 수 있는 부분이기 때문에, 컴파일 자체에서 에러가 나면 바로 인지 및 패치가 가능하다.
-<img data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_constructor_02.PNG" | relative_url }}' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='{{ "/assets/images/spring/spring05/ch05_bean_service_class_constructor_02.PNG" | relative_url }}' alt='absolute'>
+</font>
+</p>
+</div>

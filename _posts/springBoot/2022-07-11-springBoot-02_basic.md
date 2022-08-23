@@ -12,20 +12,21 @@ subclass: 'post tag-springBoot'
 author: BBInJunHwang
 ---
 
-{% include springBoot-table-of-contents.html %}
+{% include table-of-contents_springBoot.html %}
 <br>
 <h2>[스프링부트] model </h2><br>
 
 
-
+<p>
 @Data - getter / setter을 자동으로 완성
 @getter, @setter 로 개별로 설정도 가능하다.
 
-@NoArgsConstructor - 빈생성자 자동 완성
-@AllArgsConstructor - 전체 생성자 자동 완성
-@Builder - 빌더 패턴 적용
-@Entity - 해당 클래스 (UserTB)가 서비스 실행 시 DB 테이블 생성된다.
-@DynamicInsert - insert 시 null 필드 제외한다.
+@NoArgsConstructor - 빈생성자 자동 완성<br>
+@AllArgsConstructor - 전체 생성자 자동 완성<br>
+@Builder - 빌더 패턴 적용<br>
+@Entity - 해당 클래스 (UserTB)가 서비스 실행 시 DB 테이블 생성된다.<br>
+@DynamicInsert - insert 시 null 필드 제외한다.<br>
+</p>
 
 등 @ 어노테이션을 이용한 여러가지 설정을 편하게 할 수 있다.
 
@@ -39,7 +40,7 @@ author: BBInJunHwang
 
 @CreationTimestamp - 현재 시간 입력한다.
 
-<img data-action="zoom" src='{{ "/assets/images/springBoot/springBoot01/ch02_model_01.PNG" | relative_url }}' alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/springBoot/springBoot02/ch02_model_01.PNG" | relative_url }}' alt='absolute'>
 
 
 @Lob - 대용량 데이터 설정
@@ -55,6 +56,6 @@ name으로 선언된 필드를 FK로 설정한다. (자동생성)
 
 
 
-<img data-action="zoom" src='{{ "/assets/images/springBoot/springBoot01/ch02_model_02.PNG" | relative_url }}' alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/images/springBoot/springBoot02/ch02_model_02.PNG" | relative_url }}' alt='absolute'>
 
 

@@ -12,11 +12,14 @@ subclass: 'post tag-spring'
 author: BBInJunHwang
 ---
 
-{% include spring-table-of-contents.html %}
+{% include table-of-contents_springFramework.html %}
 <br>
 <h2>[스프링] AOP</h2><br>
 
-AOP란 Aspect Oriented Programming 관점지향 프로그래밍으로 사용자 기준이 아닌 (사용자가 요구한 업무 로직) 개발자 필요로 인한 운영을 위한 업무 (주가 아닌 부가업무)
+AOP란?<br> 
+<p align = "justify">
+<font size=3>
+Aspect Oriented Programming 관점지향 프로그래밍으로 사용자 기준이 아닌 (사용자가 요구한 업무 로직) 개발자 필요로 인한 운영을 위한 업무 (주가 아닌 부가업무)
 
 ex) 로그처리, 권한 처리(보안) 트랜잭션 등 주 업무와 상관없는 업무를 처리한다.
 
@@ -68,3 +71,6 @@ afterThrowing<br>
 <img data-action="zoom" src='{{ "/assets/images/spring/spring06/ch06_bean_service_class_01.PNG" | relative_url }}' alt='absolute'>
 
 순서는 before -> 메소드 실행 -> after -> around 순
+
+</font>
+</p>

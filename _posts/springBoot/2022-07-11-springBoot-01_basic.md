@@ -12,7 +12,7 @@ subclass: 'post tag-springBoot'
 author: BBInJunHwang
 ---
 
-{% include springBoot-table-of-contents.html %}
+{% include table-of-contents_springBoot.html %}
 <br>
 <h2>[스프링부트] yml 설정파일 </h2><br>
 
