@@ -1,9 +1,9 @@
 ---
 layout: post
 current: post
-cover:  assets/images/infra/2022-06-12-infra-01_basic.jpg
+cover:  assets/images/businessLogic/2022-08-22-business-01_basic.jpg
 navigation: True
-title: Toss Payment 연동
+title: 발주 프로세스(3)
 date: 2022-06-12 03:00:00 +0900
 tags: [businessLogic]  
 # tags.yml 선언한 값

@@ -152,3 +152,4 @@ exclude:
   #- _posts/infra
   #- _posts/jekyll
   #- _posts/springBoot
+  #- _posts/businessLogic
